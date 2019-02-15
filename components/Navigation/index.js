@@ -5,16 +5,16 @@ import Tab from '@material-ui/core/Tab';
 
 export default () => (
   <Paper>
-    <Link href="/">
+    <Link href="/" prefetch>
       <Tab label="Projects" />
     </Link>
-    <Link href="/social">
+    <Link href="/social" prefetch>
       <Tab label="Social" />
     </Link>
-    <Link href="/code">
+    <Link href="/code" prefetch>
       <Tab label="Code" />
     </Link>
-    <Link href="/about">
+    <Link href="/about" prefetch>
       <Tab label="About" />
     </Link>
   </Paper>

@@ -21,10 +21,6 @@ class MyDocument extends Document {
             name="theme-color"
             content={pageContext ? pageContext.theme.palette.primary.main : null}
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-          />
         </Head>
         <body>
           <Main />
@@ -61,8 +57,7 @@ MyDocument.getInitialProps = async (ctx) => {
   // Render app and page and get the context of the page with collected side effects.
   let pageContext;
 
-
-  const page = ctx.renderPage((Component) => {
+  ctx.renderPage((Component) => {
     const WrappedComponent = (props) => {
       ({ pageContext } = props);
       return <Component {...props} />;
@@ -77,21 +72,16 @@ MyDocument.getInitialProps = async (ctx) => {
     css = pageContext.sheetsRegistry.toString();
   }
 
-  const pageWithMaterialStyles = {
-    ...page,
-    pageContext,
-    // Styles fragment is rendered after the app and page rendering finish.
-    styles: (
-      <React.Fragment>
-        <style
-          id="jss-server-side"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: css }}
-        />
-        {flush() || null}
-      </React.Fragment>
-    ),
-  };
+  const materialStyles = (
+    <React.Fragment>
+      <style
+        id="jss-server-side"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: css }}
+      />
+      {flush() || null}
+    </React.Fragment>
+  );
 
   const sheet = new ServerStyleSheet();
   const originalRenderPage = ctx.renderPage;
@@ -103,8 +93,12 @@ MyDocument.getInitialProps = async (ctx) => {
     const initialProps = await Document.getInitialProps(ctx);
     return {
       ...initialProps,
-      ...pageWithMaterialStyles,
-      styles: [...initialProps.styles, ...sheet.getStyleElement()],
+      pageContext,
+      styles: [
+        ...initialProps.styles,
+        ...sheet.getStyleElement(),
+        materialStyles,
+      ],
     };
   } finally {
     sheet.seal();

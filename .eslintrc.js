@@ -7,5 +7,6 @@ module.exports = {
     "react/jsx-filename-extension": false,
     "react/prop-types": false,
     "linebreak-style": 0, 
+    "react/no-array-index-key": false,
   }
 };

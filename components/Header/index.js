@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
@@ -24,7 +25,7 @@ const Image = styled(Avatar)`
   }
 `;
 
-export default () => (
+const Header = () => (
   <StyledPaper>
     <Grid container>
       <Grid item xs={3}>
@@ -51,3 +52,5 @@ export default () => (
     </Grid>
   </StyledPaper>
 );
+
+export default React.memo(Header);

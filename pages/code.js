@@ -5,11 +5,9 @@ import { readableColor } from 'polished';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Badge from '@material-ui/core/Badge';
+import Grow from '@material-ui/core/Grow';
 import Github from '../components/Icons/Github';
-import GrowGroup from '../components/GrowGroup';
-import CodeSandbox from '../components/Icons/CodeSandbox';
 
-const CODE_SANDBOX_MRPONCHO = 'https://codesandbox.io/api/v1/users/mrponcho';
 const GITHUB_MRPONCHO = 'https://api.github.com/users/mrponcho';
 
 const ColoredPaper = styled(Paper)`
@@ -58,15 +56,6 @@ export default class Code extends Component {
   }
 
   componentDidMount() {
-    axios.get(CODE_SANDBOX_MRPONCHO).then((res) => {
-      const sandbox = res.data.data;
-      const codeSandbox = {
-        views: sandbox.view_count,
-        likes: sandbox.received_like_count,
-        sandboxes: sandbox.sandbox_count,
-      };
-      this.setState(oldState => ({ ...oldState, codeSandbox }));
-    });
     axios.get(GITHUB_MRPONCHO).then((res) => {
       const githubRes = res.data;
       const { followers, following } = githubRes;
@@ -80,29 +69,9 @@ export default class Code extends Component {
   }
 
   render() {
-    const { codeSandbox, github } = this.state;
+    const { github } = this.state;
     return (
-      <GrowGroup>
-        <Grid item xs={12}>
-          <ColoredPaper color="rgba(0,0,0,.8)">
-            <Grid container spacing={24}>
-              <Grid item sm={3} xs={12}>
-                <IconWrapper>
-                  <CodeSandbox />
-                </IconWrapper>
-              </Grid>
-              <Grid item sm={3} xs={4}>
-                <MyBadge text="Views" number={codeSandbox.views} />
-              </Grid>
-              <Grid item sm={3} xs={4}>
-                <MyBadge text="Likes" number={codeSandbox.likes} />
-              </Grid>
-              <Grid item sm={3} xs={4}>
-                <MyBadge text="Sandboxes" number={codeSandbox.sandboxes} />
-              </Grid>
-            </Grid>
-          </ColoredPaper>
-        </Grid>
+      <Grow timeout={1000} in>
         <Grid item xs={12}>
           <ColoredPaper color="#24292e">
             <Grid container spacing={24}>
@@ -123,7 +92,7 @@ export default class Code extends Component {
             </Grid>
           </ColoredPaper>
         </Grid>
-      </GrowGroup>
+      </Grow>
     );
   }
 }

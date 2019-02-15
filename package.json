@@ -5,7 +5,9 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "axios": "0.18.0",
+    "express": "^4.16.4",
     "jss": "latest",
+    "lru-cache": "^5.1.1",
     "next": "latest",
     "polished": "2.3.0",
     "prop-types": "latest",
@@ -24,8 +26,9 @@
     "eslint-plugin-react": "^7.11.1"
   },
   "scripts": {
-    "dev": "next",
+    "now-build": "next build",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   }
 }
