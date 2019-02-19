@@ -27,14 +27,16 @@ export default () => (
       </StyledPaper>
     </Grid>
     <Grid item xs={6} sm={4}>
-      <StyledPaper
-        background="linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
-        color="white"
-      >
-        <IconWrapper>
-          <Instagram />
-        </IconWrapper>
-      </StyledPaper>
+      <Link href="/social/instagram" prefetch>
+        <StyledPaper
+          background="linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
+          color="white"
+        >
+          <IconWrapper>
+            <Instagram />
+          </IconWrapper>
+        </StyledPaper>
+      </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
       <StyledPaper background="#24292e" color="white">
@@ -51,7 +53,7 @@ export default () => (
       </StyledPaper>
     </Grid>
     <Grid item xs={6} sm={4}>
-      <Link href="/social/xbox">
+      <Link href="/social/xbox" prefetch>
         <StyledPaper background="#0e7a0d" color="white">
           <IconWrapper>
             <Xbox />
