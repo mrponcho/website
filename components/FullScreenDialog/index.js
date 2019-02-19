@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
+import Router from 'next/router';
 import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
+import Zoom from '@material-ui/core/Zoom';
 import Close from '../Icons/Close';
 import AppContainer from '../AppContainer';
 
 function FullScreenDialog({
   background, children, icon, title,
 }) {
+  const [open, setOpen] = React.useState(true);
   const Header = styled(AppBar)`
     &&& {
       position: relative;
@@ -33,12 +34,13 @@ function FullScreenDialog({
   const Wrapper = styled.div`
     margin: 12px;
   `;
-  function Transition(props) {
-    return <Slide direction="up" {...props} />;
+  function handleClose() {
+    setOpen(false);
+    setTimeout(() => Router.push('/social'), 200);
   }
   return (
     <div>
-      <Dialog fullScreen open TransitionComponent={Transition}>
+      <Dialog fullScreen open={open} TransitionComponent={Zoom}>
         <Header>
           <Toolbar>
             <IconWrapper marginRight="1rem">
@@ -47,13 +49,11 @@ function FullScreenDialog({
             <Title variant="h6" color="inherit">
               {title}
             </Title>
-            <Link href="/social" prefetch>
-              <IconButton color="inherit" aria-label="Close">
-                <IconWrapper>
-                  <Close />
-                </IconWrapper>
-              </IconButton>
-            </Link>
+            <IconButton onClick={handleClose} color="inherit" aria-label="Close">
+              <IconWrapper>
+                <Close />
+              </IconWrapper>
+            </IconButton>
           </Toolbar>
         </Header>
         <Wrapper>
