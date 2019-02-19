@@ -1,21 +1,19 @@
 {
-  "name": "nextjs",
-  "version": "3.0.0",
+  "name": "johannesbarth.website",
+  "version": "0.4.0",
   "private": true,
+  "description": "My personal website using React + Material UI + Styled Components + NextJS https://johannesbarth.website",
+  "keywords": ["react", "material-ui", "styled-components", "nextjs", "now"],
   "dependencies": {
     "@material-ui/core": "latest",
     "axios": "0.18.0",
-    "express": "^4.16.4",
     "jss": "latest",
-    "lru-cache": "^5.1.1",
     "next": "latest",
     "polished": "2.3.0",
-    "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "^8.1.0",
     "styled-components": "4.0.0",
-    "styled-icons": "3.3.0",
     "styled-jsx": "^3.2.1"
   },
   "devDependencies": {
@@ -27,8 +25,8 @@
   },
   "scripts": {
     "now-build": "next build",
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   }
 }

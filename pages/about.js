@@ -10,18 +10,20 @@ function About() {
   return (
     <Grid item xs={12}>
       <Typography variant="h4" gutterBottom>
-        Material-UI
+        {'It\'s something'}
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
-        about page
+        {'Powered by React, Material UI, Styled Components and Next Js'}
       </Typography>
       <Typography gutterBottom>
         <Link href="/">
-          <a>Go to the main page</a>
+          <a>
+            {'Go to the main page'}
+          </a>
         </Link>
       </Typography>
       <Button variant="contained" color="primary">
-        Do nothing button
+        {'Nothing will happen. Trust me!'}
       </Button>
     </Grid>
   );

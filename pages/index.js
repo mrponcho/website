@@ -2,35 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import GrowGroup from '../components/GrowGroup';
-import Paper from '../components/Paper';
+import StyledPaper from '../components/StyledPaper';
 import Meiers from '../components/Icons/Meiers';
-
-const Image = styled.img`
-  height: 70px;
-`;
+import Dertour from '../components/Icons/Dertour';
 
 const IconWrapper = styled.div`
   svg {
-    height: 70px;
+    height: 35px;
+  }
+
+  @media only screen and (min-width: 550px ) {
+    svg {
+      height: 70px;
+    }
   }
 `;
 
 export default () => (
   <GrowGroup>
     <Grid item xs={6}>
-      <Paper component="a">
-        <Image
-          alt="Dertour"
-          src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2016/11/der-tour_logo-700x431.png"
-        />
-      </Paper>
+      <StyledPaper href="/social">
+        <IconWrapper>
+          <Dertour />
+        </IconWrapper>
+      </StyledPaper>
     </Grid>
     <Grid item xs={6}>
-      <Paper background="linear-gradient(180deg,#002d6c,#002252)" color="white">
+      <StyledPaper background="linear-gradient(180deg,#002d6c,#002252)" color="white">
         <IconWrapper>
           <Meiers />
         </IconWrapper>
-      </Paper>
+      </StyledPaper>
     </Grid>
   </GrowGroup>
 );

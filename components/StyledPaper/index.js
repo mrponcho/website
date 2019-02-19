@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Paper from "@material-ui/core/Paper";
+import styled from 'styled-components';
+import Paper from '@material-ui/core/Paper';
 
-export default styled(Paper)`
+const StyledPaper = styled(Paper)`
   &&& {
     display: block;
     padding: 18px;
@@ -16,3 +16,5 @@ export default styled(Paper)`
     }
   }
 `;
+
+export default StyledPaper;
