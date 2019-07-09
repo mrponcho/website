@@ -20,11 +20,13 @@ const IconWrapper = styled.div`
 export default () => (
   <GrowGroup>
     <Grid item xs={6} sm={4}>
-      <StyledPaper background="#007575" color="white">
-        <IconWrapper>
-          <Xing />
-        </IconWrapper>
-      </StyledPaper>
+      <Link href="/social/xing" prefetch>
+        <StyledPaper background="#007575" color="white">
+          <IconWrapper>
+            <Xing />
+          </IconWrapper>
+        </StyledPaper>
+      </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
       <Link href="/social/instagram" prefetch>
@@ -39,18 +41,22 @@ export default () => (
       </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
-      <StyledPaper background="#24292e" color="white">
-        <IconWrapper>
-          <Github />
-        </IconWrapper>
-      </StyledPaper>
+      <Link href="/social/github" prefetch>
+        <StyledPaper background="#24292e" color="white">
+          <IconWrapper>
+            <Github />
+          </IconWrapper>
+        </StyledPaper>
+      </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
-      <StyledPaper background="rgba(0,0,0,.8)" color="white">
-        <IconWrapper>
-          <CodeSandbox />
-        </IconWrapper>
-      </StyledPaper>
+      <Link href="/social/codesandbox" prefetch>
+        <StyledPaper background="rgba(0,0,0,.8)" color="white">
+          <IconWrapper>
+            <CodeSandbox />
+          </IconWrapper>
+        </StyledPaper>
+      </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
       <Link href="/social/xbox" prefetch>
@@ -62,11 +68,13 @@ export default () => (
       </Link>
     </Grid>
     <Grid item xs={6} sm={4}>
-      <StyledPaper background="#002f87" color="white">
-        <IconWrapper>
-          <RocketLeague />
-        </IconWrapper>
-      </StyledPaper>
+      <Link href="/social/rocketleague" prefetch>
+        <StyledPaper background="#002f87" color="white">
+          <IconWrapper>
+            <RocketLeague />
+          </IconWrapper>
+        </StyledPaper>
+      </Link>
     </Grid>
   </GrowGroup>
 );

@@ -1,0 +1,12 @@
+[
+  {
+    "img": "/static/mojito.jpg",
+    "title": "Mojito",
+    "author": "Johannes Barth"
+  },
+  {
+    "img": "/static/tuskany.jpg",
+    "title": "Tuskany",
+    "author": "Johannes Barth"
+  }
+]

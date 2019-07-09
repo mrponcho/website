@@ -74,7 +74,7 @@ export default class Code extends Component {
       <Grow timeout={1000} in>
         <Grid item xs={12}>
           <ColoredPaper color="#24292e">
-            <Grid container spacing={24}>
+            <Grid container spacing={3}>
               <Grid item sm={3} xs={12}>
                 <IconWrapper>
                   <Github />

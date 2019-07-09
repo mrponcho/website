@@ -43,7 +43,7 @@ class MyApp extends App {
             sheetsManager={this.pageContext.sheetsManager}
           >
             <AppContainer>
-              <Grid container spacing={24}>
+              <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <Header />
                 </Grid>

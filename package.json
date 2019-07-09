@@ -3,15 +3,22 @@
   "version": "0.4.0",
   "private": true,
   "description": "My personal website using React + Material UI + Styled Components + NextJS https://johannesbarth.website",
-  "keywords": ["react", "material-ui", "styled-components", "nextjs", "now"],
+  "keywords": [
+    "react",
+    "material-ui",
+    "styled-components",
+    "nextjs",
+    "now"
+  ],
   "dependencies": {
-    "@material-ui/core": "latest",
-    "axios": "0.18.0",
+    "@material-ui/core": "^4.0.2",
+    "@material-ui/styles": "^4.0.2",
+    "axios": "^0.19.0",
     "jss": "latest",
-    "next": "latest",
+    "next": "^8.1.0",
     "polished": "2.3.0",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-jss": "^8.1.0",
     "styled-components": "4.0.0",
     "styled-jsx": "^3.2.1"
@@ -19,9 +26,9 @@
   "devDependencies": {
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.13.0"
   },
   "scripts": {
     "now-build": "next build",
