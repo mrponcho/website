@@ -1,12 +1,32 @@
 [
   {
-    "img": "/static/mojito.jpg",
-    "title": "Mojito",
+    "img": "/static/joba.jpg",
+    "title": "Norway Cruise",
+    "author": "Johannes Barth"
+  },
+  {
+    "img": "/static/joba_2.jpg",
+    "title": "Madrid",
     "author": "Johannes Barth"
   },
   {
     "img": "/static/tuskany.jpg",
     "title": "Tuskany",
+    "author": "Johannes Barth"
+  },
+  {
+    "img": "/static/ffm.jpg",
+    "title": "Sunrise",
+    "author": "Johannes Barth"
+  },
+  {
+    "img": "/static/mojito.jpg",
+    "title": "Mojito",
+    "author": "Johannes Barth"
+  },
+  {
+    "img": "/static/dog.jpg",
+    "title": "Teddy",
     "author": "Johannes Barth"
   }
 ]

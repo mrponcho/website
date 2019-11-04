@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import FullScreenDialog from '../../../components/FullScreenDialog';
-import XboxIcon from '../../../components/Icons/Xbox';
-import ProfileCard from '../../../components/ProfileCard';
+import FullScreenDialog from '../../components/FullScreenDialog';
+import XboxIcon from '../../components/Icons/Xbox';
+import ProfileCard from '../../components/ProfileCard';
 
 export default function Xbox() {
   const A = styled.a`

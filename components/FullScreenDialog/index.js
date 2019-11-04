@@ -36,7 +36,8 @@ function FullScreenDialog({
   `;
   function handleClose() {
     setOpen(false);
-    setTimeout(() => Router.push('/social'), 200);
+    // set it per prop with default
+    setTimeout(() => Router.push('/'), 200);
   }
   return (
     <div>

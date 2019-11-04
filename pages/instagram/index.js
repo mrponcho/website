@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
-import FullScreenDialog from '../../../components/FullScreenDialog';
-import InstagramIcon from '../../../components/Icons/Instagram';
-import ProfileCard from '../../../components/ProfileCard';
-import TitlebarGridList from '../../../components/TitlebarGridList';
+import FullScreenDialog from '../../components/FullScreenDialog';
+import InstagramIcon from '../../components/Icons/Instagram';
+import ProfileCard from '../../components/ProfileCard';
+import TitlebarGridList from '../../components/TitlebarGridList';
 
 
 export default function Instagram() {
@@ -24,7 +24,7 @@ export default function Instagram() {
             <ProfileCard
               headline="mrp0ncho"
               alt="Instagram Profile"
-              src="/static/profile.jpg"
+              src="/static/profile_insta.jpg"
             />
           </A>
         </Grid>

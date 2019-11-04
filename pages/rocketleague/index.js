@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import FullScreenDialog from '../../../components/FullScreenDialog';
-import RocketLeagueIcon from '../../../components/Icons/RocketLeague';
-import ProfileCard from '../../../components/ProfileCard';
+import FullScreenDialog from '../../components/FullScreenDialog';
+import RocketLeagueIcon from '../../components/Icons/RocketLeague';
+import ProfileCard from '../../components/ProfileCard';
 
 export default function RocketLeague() {
   const A = styled.a`

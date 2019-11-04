@@ -5,8 +5,6 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import JssProvider from 'react-jss/lib/JssProvider';
 import Grid from '@material-ui/core/Grid';
 import AppContainer from '../components/AppContainer';
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import getPageContext from '../src/getPageContext';
 
 class MyApp extends App {
@@ -44,12 +42,6 @@ class MyApp extends App {
           >
             <AppContainer>
               <Grid container spacing={3}>
-                <Grid item xs={12}>
-                  <Header />
-                </Grid>
-                <Grid item xs={12}>
-                  <Navigation />
-                </Grid>
                 {/* rendered Pages  */}
                 <Component pageContext={this.pageContext} {...pageProps} />
               </Grid>

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import FullScreenDialog from '../../../components/FullScreenDialog';
-import XingIcon from '../../../components/Icons/Xing';
-import ProfileCard from '../../../components/ProfileCard';
+import FullScreenDialog from '../../components/FullScreenDialog';
+import XingIcon from '../../components/Icons/Xing';
+import ProfileCard from '../../components/ProfileCard';
 
 export default function Xing() {
   const A = styled.a`
