@@ -27,7 +27,7 @@ class MyApp extends App {
       <Container>
         <Head>
           <title>Johannes Barth</title>
-          <meta name="description" content="Johannes Barth. Web Developer. '95 | Mannheim | Life is beautiful" />
+          <meta name="description" content="Johannes Barth. Developer. '95 | Mannheim | Life is beautiful" />
         </Head>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider

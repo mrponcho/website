@@ -8,7 +8,7 @@ export default function Header() {
       alt="Johannes Barth"
       headline="Johannes Barth"
       subline="'95 | Mannheim | Life is beautiful"
-      description="Web-Developer"
+      description="Developer"
     />
   );
 }
