@@ -2,8 +2,18 @@
   "name": "johannesbarth.website",
   "version": 2,
   "alias": "johannesbarth.website",
-  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "builds": [
+    { 
+      "src": "package.json", 
+      "use": "@now/next" 
+    }
+  ],
   "routes": [
-    { "src": "/static/.+", "headers": { "cache-control": "s-maxage=604800" } }
+    { 
+      "src": "/static/(.*)",
+      "headers": { 
+        "cache-control": "s-maxage=604800"
+      }
+    }
   ]
 }
