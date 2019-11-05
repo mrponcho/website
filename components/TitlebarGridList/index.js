@@ -26,37 +26,20 @@ const styles = theme => ({
 });
 
 const getColumns = (width) => {
-  if (width <= 480) return 1;
   if (width <= 720) return 2;
   return 3;
 };
 
 const getCellHeight = (width) => {
-  if (width <= 480) return 450;
-  // if (width <= 640) return ;
+  if (width <= 480) return 160;
+  if (width <= 540) return 240;
+  if (width <= 720) return 280;
   return 240;
 };
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-function TitlebarGridList(props) {
+
+function TitlebarGridList({ classes }) {
   const { width } = useWindowDimensions();
-  const { classes } = props;
 
   return (
     <div className={classes.root}>
