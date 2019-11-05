@@ -12,7 +12,7 @@
     { 
       "src": "/static/(.*)",
       "headers": { 
-        "cache-control": "s-maxage=604800"
+        "cache-control": "maxage=604800"
       }
     }
   ]
