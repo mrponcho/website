@@ -18,6 +18,9 @@ export const theme = createMuiTheme({
       main: pink[500],
       dark: pink[700],
     },
+    brandColors: {
+      xing: '#007575',
+    },
   },
   typography: {
     useNextVariants: true,
