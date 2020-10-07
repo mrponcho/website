@@ -15,11 +15,11 @@ export default function RocketLeague() {
       color="white"
       background="#002f87"
     >
-      <A href="https://codesandbox.io/u/mrponcho">
+      <A href="https://rocketleague.tracker.network/rocket-league/profile/steam/76561198061863602/overview">
         <ProfileCard
-          headline="mrponcho"
+          headline="MrPoncho"
           alt="RocketLeague Profile"
-          src="/static/profile.jpg"
+          src="/static/rl.jpg"
           color="white"
           background="#002f87"
         />
