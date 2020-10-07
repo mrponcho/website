@@ -15,7 +15,7 @@ export default function Github() {
       color="white"
       background="#24292e"
     >
-      <A href="https://codesandbox.io/u/mrponcho">
+      <A href="https://github.com/mrponcho">
         <ProfileCard
           headline="mrponcho"
           alt="Github Profile"
