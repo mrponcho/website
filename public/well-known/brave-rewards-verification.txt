@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: johannesbarth.website
+Token: 55c182ca7071f250d7e0cdc2f506f33e58b0ce04a1dcd86218b9ce38a146ce89
